@@ -1,3 +1,13 @@
+## Portfolio Overview
+
+This repository demonstrates the technical implementation of production ICM close controls:
+
+- **Data Architecture**: [`docs/ICM_Data_Flow.drawio.pdf`](docs/ICM_Data_Flow.drawio.pdf) - Pipeline design with staging layers and freeze points
+- **Operational Process**: [`docs/ICM_Comp_Close_Runbook.md`](docs/ICM_Comp_Close_Runbook.md) - Close workflow, validation thresholds, reconciliation spine
+- **SQL Implementation**: Queries in `close_controls/`, `validations/`, and `troubleshooting/` execute the controls defined in the runbook
+
+See the runbook for operational context and validation logic requirements.
+
 # ICM SQL Close Controls (DuckDB)
 
 This repo demonstrates an operator oriented approach to incentive compensation (ICM) data integrity using SQL:
