@@ -1,0 +1,29 @@
+# ICM SQL Close Controls (DuckDB)
+
+This repo demonstrates an operator oriented approach to incentive compensation (ICM) data integrity using SQL:
+- immutable raw staging
+- curated comp-period facts
+- blocking validations
+- close reconciliation
+- dispute tracing
+
+See docs/ICM_Comp_Close_Runbook.md for close workflow context and operational assumptions.
+
+## What to look at
+1. Close readiness summary  
+   `close_controls/s02_calc_readiness_summary.sql`
+
+2. Recon spine (SFDC → Curated → Credited)  
+   `close_controls/s03_recon_spine.sql`
+
+3. End-to-end deal trace  
+   `troubleshooting/t01_trace_deal.sql`
+
+## How to run
+```sql
+-- inside DuckDB CLI
+.read scripts/run_demo.sql
+
+
+
+All data is synthetic and included solely to demonstrate validation and reconciliation patterns.
